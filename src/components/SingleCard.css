@@ -1,0 +1,35 @@
+.card{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    /* border-radius: 90px; */
+    background-color: #2F3C7E;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    /* width: 100%; */
+    display: block;
+    /* border: 2px solid black; */
+    /* border-radius: 90px; */
+}
+.card .front{
+    transform: rotateY(90deg);
+    transition: all ease-in 0.2s;
+    position: absolute;
+}
+.flipped .front{
+    transform: rotateY(0deg);
+    transition-delay:0.2s;
+}
+.card .back{
+    /* border:2px solid black;; */
+    transition: all ease-in 0.2s;
+    transition-delay:0.2s;
+    filter: grayscale(1)  drop-shadow(2px 4px 6px black) contrast(0.9);
+    /* filter: grayscale(1) invert(1) drop-shadow(2px 4px 6px black) contrast(0.9); */
+}
+.flipped .back{
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}

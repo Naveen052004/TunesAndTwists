@@ -1,0 +1,193 @@
+* {
+  scrollbar-width: none;
+}
+.App {
+  max-width: 860px;
+  margin: 40px auto;
+  background-color: #1a1a1a; /* Black background */
+  padding: 1rem .2rem;
+  filter: drop-shadow(2px 4px 6px black);
+}
+/* Styling for the heading */
+.welcome-text {
+  text-align: center;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+/* Styling for the circular watch container */
+.watch-container {
+  position: relative;
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes it circular */
+  background: radial-gradient(circle, #000 50%, #2d2d2d 70%); /* Dark center fading outwards */
+  border: 10px solid #0f0; /* Green border like the Omnitrix */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
+  transition: transform 0.5s; /* Smooth rotation effect */
+}
+
+/* Rotates the container on hover */
+.watch-container:hover {
+  transform: rotate(360deg); /* Full rotation */
+}
+
+/* Triangular shapes on hover */
+.watch-container::before,
+.watch-container::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: opacity 0.5s, transform 0.5s; /* Smooth fade and transform effect */
+}
+
+.watch-container::before {
+  top: 50%; /* Center vertically */
+  left: -30px; /* Position to the left of the container */
+  transform: translateY(-50%) rotate(90deg); /* Center and rotate to point right */
+  border-width: 20px 30px 20px 0;
+  border-color: transparent #0f0 transparent transparent; /* Green triangle */
+  opacity: 0; /* Initially hidden */
+}
+
+.watch-container::after {
+  top: 50%; /* Center vertically */
+  right: -30px; /* Position to the right of the container */
+  transform: translateY(-50%) rotate(-90deg); /* Center and rotate to point left */
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent #0f0; /* Green triangle */
+  opacity: 0; /* Initially hidden */
+}
+
+/* Show triangles on hover */
+.watch-container:hover::before,
+.watch-container:hover::after {
+  opacity: 1; /* Make triangles visible */
+}
+button {
+  background: none;
+  border: 2px solid #00ff00; /* Green border */
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #00ff00; /* Green text */
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+button:hover {
+  background: #00ff00; /* Green background on hover */
+  color: black;
+}
+.div2Buttons {
+  margin-right: 1rem;
+}
+.div2Buttons:hover {
+  background: #00ff00; /* Green background on hover */
+  color: black;
+}
+.parentdiv {
+  overflow: hidden;
+  padding: 5px;
+}
+.div1 {
+  background: #0d7377; /* Dark greenish-blue background */
+  overflow: auto;
+  width: 64%;
+  float: left;
+  border-right: 2px solid #00ff00; /* Green border */
+  border-radius: 10px;
+  border-top: 2px solid #00ff00; /* Green border */
+  border-bottom: 2px solid #00ff00; /* Green border */
+  height: 88vh;
+}
+.div2 {
+  background: #14a76c; /* Bright green background */
+  height: 88vh;
+  overflow: auto;
+  width: 35.8%;
+  float: right;
+  border-left: 2px solid #00ff00; /* Green border */
+  border-radius: 10px;
+  border-top: 2px solid #00ff00; /* Green border */
+  border-bottom: 2px solid #00ff00; /* Green border */
+}
+.Navi {
+  margin: .4rem 1rem;
+}
+.NavDiv {
+  display: ruby-text;
+  background-color: #1a1a1a; /* Black background */
+}
+.Navi li {
+  display: inline-block;
+  margin: 5px 20px;
+}
+.card-grid {
+  margin-left: 64px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.Searching {
+  background-color: #0d7377; /* Dark greenish-blue background */
+  color: #00ff00; /* Green text */
+}
+.Searching::placeholder {
+  color: #00ff00; /* Green placeholder text */
+}
+
+.game-board {
+  float: left;
+  width: 70%;
+  border-right: 2px solid #00ff00; /* Green border */
+  height: 80vh;
+}
+
+.game-info {
+  float: right;
+  width: 30%;
+  border-left: 2px solid #00ff00; /* Green border */
+  height: 80vh;
+}
+
+.game-info button {
+  font-size: 20px;
+  margin: 10px 10px;
+  color: #00ff00; /* Green text */
+  border: 2px solid #00ff00; /* Green border */
+}
+
+.square {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background-color: #0d7377; /* Dark greenish-blue background */
+  border: 2px solid #00ff00; /* Green border */
+}
+
+.board-row {
+  display: inline-flex;
+}
+
+.music-player {
+  opacity: 0;
+  max-height: 0;
+  overflow: scroll;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+.music-player.show {
+  opacity: 1;
+  max-height: 78vh;
+}
+.span .a {
+  color: #00ff00 !important; /* Green text */
+}

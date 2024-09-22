@@ -1,0 +1,36 @@
+.test{
+    border: 2px solid white;
+    text-align: justify;
+    padding: 25px;
+    margin: 0px 10px;
+}
+.test span{
+    font-size: 30px;
+    user-select: none;
+    cursor: text;
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 82px;
+    margin-inline: 25px;
+    padding: 5px 15px;
+    /* border: 2px solid white; */
+}
+.input-field{
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+}
+span.active{
+    border-bottom: 3px solid white;
+}
+
+span.correct{
+    background-color: green;
+}
+span.wrong{
+    color:green;
+    background-color: black;
+}

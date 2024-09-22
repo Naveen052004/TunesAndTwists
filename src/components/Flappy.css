@@ -1,0 +1,6 @@
+.flappy{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    z-index: 1;
+}

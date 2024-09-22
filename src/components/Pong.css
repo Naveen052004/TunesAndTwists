@@ -1,0 +1,11 @@
+.pong{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    flex-direction: column;
+    max-width: 860px;
+    margin: 40px auto;
+}
